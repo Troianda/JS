@@ -1,3 +1,4 @@
+'use strict';
 // const arr = ["a", "b", "c"];
 // const arrObj = {
 //   a: "a",
@@ -83,22 +84,53 @@
 
     // 1.2  ----------------TEACHER PRACTICE -----------------
 
-    const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели', '');
+    // const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели', '');
 
-    const personalMovieDB = {
-        count: numberOfFilms,
-        movies: {},
-        actors: {},
-        genres: [],
-        privat: false
-    };
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-          b = prompt('На сколько оцените его?', ''),
-          c = prompt('Один из последних просмотренных фильмов?', ''),
-          d = prompt('На сколько оцените его?', '');
+    // const personalMovieDB = {
+    //     count: numberOfFilms,
+    //     movies: {},
+    //     actors: {},
+    //     genres: [],
+    //     privat: false
+    // };
+    // const a = prompt('Один из последних просмотренных фильмов?', ''),
+    //       b = prompt('На сколько оцените его?', ''),
+    //       c = prompt('Один из последних просмотренных фильмов?', ''),
+    //       d = prompt('На сколько оцените его?', '');
     
-    personalMovieDB.movies[a] = b;
-    personalMovieDB.movies[c] = d;
+    // personalMovieDB.movies[a] = b;
+    // personalMovieDB.movies[c] = d;
 
-    console.log(personalMovieDB);
+    // console.log(personalMovieDB);
 
+// if (4 == 9) {
+//     console.log('Ok!');
+// } else {
+//     console.log('Error');
+// }
+
+// if (num < 49) {
+//     console.log('Error');
+// } else if (num > 100) {
+//     console.log('to much');
+// } else {
+//     console.log('Ok!');
+// }
+// (num === 50) ? console.log('Ok!') : console.log('Error');
+
+const num = 50;
+
+switch (num) {
+    case 49: //СРАВНИВАТЬ ТОЛЬКО НА СТРОГОЕ СООТВЕТСТВИЕ
+        console.log('not true');
+        break; //ПОСЛЕ КАЖДОЙ КОМАНДЫ / ДЕЙСТВИЯ ЗАПИСЫВАТЬ БРЕЙК
+    case 100:
+        console.log('not true');
+        break;
+    case 50:
+        console.log('it is true');
+        break;
+    default:
+        console.log('POHUY');
+        break;       // ЧТО БЫ ВЫПОЛНИТЬ ДЕЙСТВИЕ ПО УМОЛЧАНИЮ ЕСЛИ НИЧЕГО НЕ ПОДОШЛО
+}
