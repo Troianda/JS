@@ -39,18 +39,66 @@
 
 // alert(`Привет, ${user}`);
 
-let incr = 10,
-    decr = 10;
+// let incr = 10,
+//     decr = 10;
 
     // incr++;
     // decr--;
 
-    console.log(++incr);
-    console.log(--decr);
+    // console.log(++incr);
+    // console.log(--decr);
 
-    console.log(25%8);
+    // console.log(25%8);
 
-    const isChecked = true,
-          isClose = true;
+    // const isChecked = true,
+    //       isClose = true;
 
-          console.log(isChecked &&  isClose);
+    //       console.log(isChecked &&  isClose);
+
+
+    //               08.12.22
+    //  1.1   -----------        MY PRACTICE ----------------
+    // let answer = [""];    
+    // let numberOfFilms = answer;
+    
+    // answer[0] = prompt("Сколько фильмов Вы уже посмотрели", "");
+    // console.log(numberOfFilms);
+    
+    // let answerLastFilmSaw = "";
+    // let answerFilmMark = "";
+
+    // answerLastFilmSaw = prompt("Один из последних просмотренных фильмов?", "");
+    // answerFilmMark = prompt("На сколько оцените его?", "");
+
+    // let personalMovieDB = {
+    //     count: answer,
+    //     movies: {
+    //         answerLastFilmSaw: answerFilmMark 
+    //     },
+    //     actors: {},
+    //     genres: [],
+    //     privat: false
+    // };
+    // console.log(personalMovieDB);
+
+    // 1.2  ----------------TEACHER PRACTICE -----------------
+
+    const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели', '');
+
+    const personalMovieDB = {
+        count: numberOfFilms,
+        movies: {},
+        actors: {},
+        genres: [],
+        privat: false
+    };
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+          b = prompt('На сколько оцените его?', ''),
+          c = prompt('Один из последних просмотренных фильмов?', ''),
+          d = prompt('На сколько оцените его?', '');
+    
+    personalMovieDB.movies[a] = b;
+    personalMovieDB.movies[c] = d;
+
+    console.log(personalMovieDB);
+
