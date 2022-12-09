@@ -102,7 +102,7 @@
     // personalMovieDB.movies[c] = d;
 
     // console.log(personalMovieDB);
-
+//-----------------------УСЛОВИЯ----------------------//
 // if (4 == 9) {
 //     console.log('Ok!');
 // } else {
@@ -118,19 +118,79 @@
 // }
 // (num === 50) ? console.log('Ok!') : console.log('Error');
 
-const num = 50;
+// const num = 50;
 
-switch (num) {
-    case 49: //СРАВНИВАТЬ ТОЛЬКО НА СТРОГОЕ СООТВЕТСТВИЕ
-        console.log('not true');
-        break; //ПОСЛЕ КАЖДОЙ КОМАНДЫ / ДЕЙСТВИЯ ЗАПИСЫВАТЬ БРЕЙК
-    case 100:
-        console.log('not true');
-        break;
-    case 50:
-        console.log('it is true');
-        break;
-    default:
-        console.log('POHUY');
-        break;       // ЧТО БЫ ВЫПОЛНИТЬ ДЕЙСТВИЕ ПО УМОЛЧАНИЮ ЕСЛИ НИЧЕГО НЕ ПОДОШЛО
+// switch (num) {
+//     case 49: //СРАВНИВАТЬ ТОЛЬКО НА СТРОГОЕ СООТВЕТСТВИЕ
+//         console.log('not true');
+//         break; //ПОСЛЕ КАЖДОЙ КОМАНДЫ / ДЕЙСТВИЯ ЗАПИСЫВАТЬ БРЕЙК
+//     case 100:
+//         console.log('not true');
+//         break;
+//     case 509:
+//         console.log('it is true');
+//         break;
+//     default:
+//         console.log('POHUY');
+//         break;       // ЧТО БЫ ВЫПОЛНИТЬ ДЕЙСТВИЕ ПО УМОЛЧАНИЮ ЕСЛИ НИЧЕГО НЕ ПОДОШЛО
+// }
+
+// const hamburger = true; // Undefined, null, 0, NaN, '', <== ВСЕГДА FALSE В СРАВНЕНИИ
+// const fries = true;
+
+// if (hamburger && fries) {
+//     console.log('Я сыт!');
+// }
+
+// console.log((hamburger && fries));
+
+// const hamburger = 2; 
+// const fries = 1;
+
+// if (hamburger === 3 && fries) {
+//     console.log('Все сыты!');
+// } else {
+//     console.log('Мы уходим');
+// }
+
+// const hamburger = 3; 
+// const fries = 1;
+// const cola = 0;
+
+//console.log(hamburger === 3 && cola && fries); //ОПЕРАТОР И (&&) ВОЗВРАЩАЕТ ПЕРВОЕ ЛОЖНОЕ ЗНАЧЕНИЕ(НА КОТОРОМ ОН ОСТАНОВИЛ СВОЮ РАБОТУ)
+//ЕСЛИ ВСЕ ВЕРНО ОН ВЕРНЕТ ЗНАЧЕНИЕ ПОСЛЕДНЕГО НА КОТОРОМ ОН СРАБОТАЛ
+// ОПЕРАТОР И(&&) ЗАПИНАЕТСЯ НА ЛЖИ
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && 'oihjghccvhjbjbj');
+
+// if (hamburger === 3 && cola === 1 && fries) {
+//     console.log('Все сыты!');
+// } else {
+//     console.log('Мы уходим');
+// }
+
+const hamburger = 3; 
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+//ОПЕРАТОР ИЛИ (ЕСЛИ ХОТЬ ЧТО_ТО ЕСТЬ ОПЕРАЦИЯ ВЫПОЛНИТСЯ)
+//КАК ТОЛЬКО "ИЛИ" ВИДИТ ПРАВДУ ОН ВОЗВРАЩАЕТ ЗНАЧЕНИЕ И ОСТАНАВЛИВАЕТСЯ 
+//"ИЛИ(||) ЗАПИНАЕТСЯ НА ПРАВДЕ" 
+//ЕСЛИ ВСЕ НЕ ПРАВДА ВОЗВР ПОСЛЕДНЕЕ ЛОЖНОЕ ЗНАЧЕНИЕ
+
+if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+    console.log('Все good!');
+} else {
+    console.log('Мы уходим');
 }
+console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+
+let johnReport, alexReport, samReport, mariaReport = 'done';
+
+console.log(johnReport || alexReport || samReport || mariaReport);
+
+console.log(!0); // ОПЕРАТОР РЕВЕРСА ОБРАЩАЕТ ПРАВДУ В ЛОЖЬ
