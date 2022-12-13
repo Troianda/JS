@@ -160,7 +160,6 @@
 //console.log(hamburger === 3 && cola && fries); //ОПЕРАТОР И (&&) ВОЗВРАЩАЕТ ПЕРВОЕ ЛОЖНОЕ ЗНАЧЕНИЕ(НА КОТОРОМ ОН ОСТАНОВИЛ СВОЮ РАБОТУ)
 //ЕСЛИ ВСЕ ВЕРНО ОН ВЕРНЕТ ЗНАЧЕНИЕ ПОСЛЕДНЕГО НА КОТОРОМ ОН СРАБОТАЛ
 // ОПЕРАТОР И(&&) ЗАПИНАЕТСЯ НА ЛЖИ
-
 // console.log(1 && 0);
 // console.log(1 && 5);
 // console.log(null && 5);
@@ -228,15 +227,34 @@
 //    console.log('Done!')
 // }
 
-let hamburger;
-const fries = NaN;
-const cola = 0;
-const nuggets = 2;
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
  
-if (hamburger && cola || fries === 3 && nuggets) {
-   console.log('Done!')
-}
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// }
 
 
 
+// function firstTask() {
+//     // Пишем решение вот тут
+//     const num = 5;
 
+//     while (num < 10) {
+//         console.log(num);
+//         num++;
+//     }
+    
+// }
+
+// // Место для второй задачи
+// function secondTask() {
+//     // Пишем решение вот тут
+//     for (let i = 20; i > 10; i--) {
+//         if (i === 13) break;
+//         console.log(i);
+//     }
+    
+// }
