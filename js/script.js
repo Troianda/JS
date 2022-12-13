@@ -123,40 +123,71 @@
 
 // ---------------------ФУНКЦИИ----------------------------
 
-let num = 20;
+// let num = 20;
 
-function showFirstMessage(text) { // НАЗВАНИЕ ФУНКЦИИ ДОЛЖНО БЫТЬ ГЛАГОЛОМ С ПРИПИСКОЙ
-  // ТОГО НАД ЧЕМ ВЫПОЛНЯЕТ ДЕЙСТВИЕ
-  console.log(text);
-  num = 10;
-  console.log(num);
-}
-
-showFirstMessage('Hello World!');
-console.log(num);
-
-// function calc(a, b) {
-//   return (a + b); //ПОСЛЕ РЕТУРНА НИЧЕГО НЕ ЗАДАЕМ
+// function showFirstMessage(text) { // НАЗВАНИЕ ФУНКЦИИ ДОЛЖНО БЫТЬ ГЛАГОЛОМ С ПРИПИСКОЙ
+//   // ТОГО НАД ЧЕМ ВЫПОЛНЯЕТ ДЕЙСТВИЕ
+//   console.log(text);
+//   num = 10;
+//   console.log(num);
 // }
-// console.log(calc(4, 3));
-// console.log(calc(5, 6));
-// console.log(calc(10, 6));
 
-function ret() { // FUNCTION DECLARATION СУЩЕСТВУЕТ ДО ВЫПОЛНЕНИЯ КАК ВАР ПЕРЕМен
-  let num = 50;
+// showFirstMessage('Hello World!');
+// console.log(num);
+
+// // function calc(a, b) {
+// //   return (a + b); //ПОСЛЕ РЕТУРНА НИЧЕГО НЕ ЗАДАЕМ
+// // }
+// // console.log(calc(4, 3));
+// // console.log(calc(5, 6));
+// // console.log(calc(10, 6));
+
+// function ret() { // FUNCTION DECLARATION СУЩЕСТВУЕТ ДО ВЫПОЛНЕНИЯ КАК ВАР ПЕРЕМен
+//   let num = 50;
 
 
-  //
+//   //
 
-  return num;
+//   return num;
+// }
+
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function() { // FUNCTION EXSPRESSION
+//   console.log('Hello');
+// }; // ;<========= обязательно после функции так как это переменная
+// logger();
+
+// const calc = (a, b) => { return a + b }; // СТРЕЛОЧНАЯ ФУНКЦИЯ ЕСЛИ ОДНА СТРОКА ТО БЕЗ ФИГУРНЫХ СКОБОК ИЛИ 1 АРГУМЕНТ БЕЗ КРУГЛЫХ СКОБОК
+
+// --------- ПРОШТУДИРОВАТЬ ЦИКЛЫ ОБЯЗАТЕЛЬНО
+
+const usdCurr = 28;
+const eurCurr = 35;
+const discount = 0.9;
+
+function convert(amount, curr) {
+  return curr * amount;
 }
 
-const anotherNum = ret();
-console.log(anotherNum);
+function promotion(result) {
+  console.log(result * discount);
+}
 
-const logger = function() { // FUNCTION EXSPRESSION
-  console.log('Hello');
-}; // ;<========= обязательно после функции так как это переменная
-logger();
+const res = convert(500, usdCurr);
 
-const calc = (a, b) => { return a + b }; // СТРЕЛОЧНАЯ ФУНКЦИЯ ЕСЛИ ОДНА СТРОКА ТО БЕЗ ФИГУРНЫХ СКОБОК ИЛИ 1 АРГУМЕНТ БЕЗ КРУГЛЫХ СКОБОК
+promotion (res);
+// convert(500, eurCurr);
+
+function test () {
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+    if (i === 3) return // ПОСЛЕ РЕТУРНА НЕ ПЕРЕНОСИТЬ СТРОКУ, КОД РАБОТАТЬ НЕ БУДЕТ
+  }
+  console.log('Done');
+}
+test();
+
+function doNothing() {}
+console.log(doNothing() === undefined);
