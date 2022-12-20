@@ -159,7 +159,8 @@
 // }; // ;<========= обязательно после функции так как это переменная
 // logger();
 
-// const calc = (a, b) => { return a + b }; // СТРЕЛОЧНАЯ ФУНКЦИЯ ЕСЛИ ОДНА СТРОКА ТО БЕЗ ФИГУРНЫХ СКОБОК ИЛИ 1 АРГУМЕНТ БЕЗ КРУГЛЫХ СКОБОК
+// const calc = (a, b) => { return a + b }; // СТРЕЛОЧНАЯ ФУНКЦИЯ ЕСЛИ ОДНА СТРОКА ТО БЕЗ ФИГУРНЫХ СКОБОК
+// ИЛИ 1 АРГУМЕНТ БЕЗ КРУГЛЫХ СКОБОК
 
 // --------- ПРОШТУДИРОВАТЬ ЦИКЛЫ ОБЯЗАТЕЛЬНО
 
@@ -183,11 +184,155 @@ promotion (res);
 function test () {
   for (let i = 0; i < 5; i++) {
     console.log(i);
-    if (i === 3) return // ПОСЛЕ РЕТУРНА НЕ ПЕРЕНОСИТЬ СТРОКУ, КОД РАБОТАТЬ НЕ БУДЕТ
+    if (i === 3) return // ПОСЛЕ РЕТУРНА НЕ ПЕРЕНОСИТЬ СТРОКУ, 
+    //КОД РАБОТАТЬ НЕ БУДЕТ
   }
   console.log('Done');
 }
 test();
 
-function doNothing() {}
-console.log(doNothing() === undefined);
+// function doNothing() {}
+// console.log(doNothing() === undefined);
+
+// function sayHello(name) {
+// name + 'Anton';
+// }
+// sayHello();
+
+// function sayHello(name) {
+//   return `Привет, ${name}!`;
+// }
+
+// sayHello('Alex');
+
+// returnNeighboringNumbers(5);
+
+// function getMathResult(num, times) {
+//     if (typeof(times) !== 'number' || times <= 0) {
+//         return num;
+//     }
+
+//     let str = '';
+
+//     for (let i = 1; i <= times; i++) {
+//         if (i === times) {
+//             str += `${num * i}`;
+//             // Тут без черточек в конце
+//         } else {
+//             str += `${num * i}---`;
+//             // Это тоже самое, что и
+//             // str = str + num * i + "---"
+//         }
+//     }
+
+//     return str;
+// }
+
+// getMathResult(10, 5);
+
+// const logg = "Hello worldsdfsfsfsfsf";
+
+// console.log(logg.slice(4, 12));
+
+function calculateVolumeAndArea(length) {
+  if (typeof (length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+      return "При вычислении произошла ошибка";
+  }
+
+  let volume = 0,
+      area = 0;
+
+  volume = length * length * length;
+  // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+  // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+  area = 6 * (length * length);
+
+  return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+}
+
+calculateVolumeAndArea(0);
+
+function getCoupeNumber(seatNumber) {
+  if (typeof (seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+      return "Ошибка. Проверьте правильность введенного номера места";
+  }
+
+  if (seatNumber === 0 || seatNumber > 36) {
+      return "Таких мест в вагоне не существует";
+  }
+
+  return Math.ceil(seatNumber / 4);
+  // тут очень много вариантов решения, но выбрал один из элегантных :)
+}
+
+getCoupeNumber(33);
+
+
+const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели', '');
+
+     const personalMovieDB = {
+         count: numberOfFilms,
+         movies: {},
+         actors: {},
+         genres: [],
+         privat: false
+     };
+     function rememberMyFilm() {
+     for (let i = 0; i < 2; i++) {
+      const a = prompt('Один из последних просмотренных фильмов?', '').trim(), // <=== удаляет пробел перед строкой 
+      //и после неё
+            b = prompt('На сколько оцените его?', '');
+     
+            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+     } else {
+       console.log('error');
+       i--;
+     }
+  }
+}
+
+rememberMyFilm()
+
+
+  if (personalMovieDB.count < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+  console.log('Вы класический зритель');
+} else if (personalMovieDB.count >= 30) {
+  console.log('Вы киноман');
+} else {
+  console.log('Произошла ошибка');
+}
+     
+console.log(personalMovieDB);
+
+
+
+//-----------CALLBACK FUNCTION----------------------------
+
+function first(){
+  setTimeout(function() {
+    console.log(1);
+  }, 500);
+}
+
+function second() {
+  console.log(2);
+}
+
+first();
+second();
+
+function learnJs(lang, callback) {
+  console.log(`Я учу: ${lang}`);
+  callback();
+}
+
+function done() {
+  console.log('Я прошел этот урок!');
+}
+
+learnJs('JavaScript', done); // <==== 'done' передаем а не вызываем, 
+// не ставим скобки() так как не вызываем функцию то есть пишем без скобок done
