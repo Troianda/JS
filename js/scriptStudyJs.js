@@ -197,6 +197,8 @@
 // console.log(johnReport || alexReport || samReport || mariaReport);
 
 // console.log(!0); // ОПЕРАТОР РЕВЕРСА(ОТРИЦАНИЯ) ОБРАЩАЕТ ПРАВДУ В ЛОЖЬ
+// ОПЕРАТОР ! (НЕ) сначала приводит аргумент к логическому типу
+//true false а затем возвращает противоположное значение
 
 // console.log( NaN || 2 || undefined );
 
@@ -277,3 +279,158 @@ let num = 50;
     
 //     console.log(i);
   
+// // let message = (92 > '11' && 58 < 100) ? 'Истина!' : 'Ложь!';
+//  console.log(92 > '11');
+
+// let num = 8;
+// while (num) {
+//     console.log(num);
+//     num--;
+// }
+
+// for (let i = 1; i < 6; i++) {
+//     console.log(i)
+// };
+
+// let inum = 1;
+// while (inum < 6) {
+//     console.log(inum);
+//     inum++
+// }
+
+// for (let num = 0; num < 3; num++) {
+//     console.log(`Число: ${num}`);
+// }
+
+// let inum = 0;
+// while(inum < 3) {
+//     console.log(`Число: ${inum} `);
+//     inum++
+// }
+// let nonum = 1;
+// do {
+//     console.log(nonum);
+//     nonum++;
+// } while (nonum < 6);
+
+// firstFor: for (let num = 0; num < 2; num++) {
+//     for (let size = 0; size < 3; size++) {
+//         console.log(size);
+//         if (size === 1) {
+//             break firstFor;
+//         }
+//     }
+//     console.log(num);
+// }
+
+// function showName() {
+//     console.log('Вася!')
+// }
+// setTimeout(showName, 0);
+// console.log('Коля!');
+
+// showMessage();
+// function showMessage() {
+//     console.log('soobshenie');
+// }
+
+// if(2 > 1) 
+//     function showMessage() {
+//         console.log('soobshenie')
+//         return
+//     }
+
+// showMessage();
+
+
+//ДОМАШКА
+/*
+1. Изучить теорию
+2. Решить задачи:
+*/
+/*
+// Задача №1 (верна ли запись) no
+const userInfo = {
+	name: "Вася" 
+	age: 30
+}
+
+//Задача №2 (что будет в консоли?)
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	"58": 'Значение свойства'
+}
+console.log(userInfo[58]);
+
+// Задача №3 (что будет в консоли?)
+let userInfo = {
+	name: "Вася",
+	age: 30
+}
+let user = userInfo;
+user.age = 45;
+
+console.log(userInfo.age);
+
+// Задача №4 (что будет в консоли?)
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	showInfo() {
+		console.log(`${this.name}`);
+	}
+}
+let user = userInfo;
+userInfo = null;
+user.showInfo();
+
+// Задача №5 (что будет в консоли?)
+let userInfo = {
+	name: "Вася",
+	age: 30,
+}
+for (const key in userInfo) {
+	const value = userInfo[key];
+	console.log(value);
+}
+
+// Задача №6 (что будет в консоли?)
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod"
+	}
+}
+for (const key in userInfo.address) {
+	console.log(userInfo.address[key]);
+}
+
+// Задача №7 (верна ли запись)
+const userInfo = {
+	name: "Вася",
+	age: 30,
+	"likes js": true
+}
+console.log(userInfo['likes js']);
+*/
+// Задача №8
+/*
+1.Создайте пустой объект userInfo.
+2.Добавьте свойство name со значением Вася.
+3.Добавьте свойство age со значением 30.
+4.Измените значение свойства name на Лена.
+5.Удалите свойство name из объекта.
+*/
+
+let userInfo = {
+    name: "Вася",
+    age: 30,
+};
+console.log(userInfo);
+userInfo.name = "Лена";
+console.log(userInfo);
+delete userInfo.name;
+console.log(userInfo);
